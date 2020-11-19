@@ -3,17 +3,21 @@ from django.conf import settings
 
 # Create your models here.
 class Genre(models.Model):
-    name = models.CharField(max_length=50)
+    name = models.TextField()
 
 class Movie(models.Model):
+    popularity = models.FloatField()
+    vote_average = models.FloatField()
     title = models.CharField(max_length=100)
     release_date = models.DateField()
-    popularity = models.FloatField()
-    vote_count = models.IntegerField()
-    vote_average = models.FloatField()
+    original_language = models.TextField()
+    original_title = models.TextField()
+    genre_ids = models.ManyToManyField(Genre)
+    # genre_ids = models.TextField()
+    # backdrop_path = models.TextField()
+    adult = models.TextField()
     overview = models.TextField()
-    poster_path = models.CharField(max_length=200)
-    genres = models.ManyToManyField(Genre)
+    poster_path = models.TextField()
 
 class Rate(models.Model):
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
