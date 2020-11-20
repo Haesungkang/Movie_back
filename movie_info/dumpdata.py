@@ -1630,7 +1630,7 @@ for i in range(1, len(result)):
         'genre_ids': result[i]['genre_ids'],
         'adult': result[i]['adult'],
         'overview': result[i]['overview'],
-        'poster_path': result[i]['poster_path'],
+        'poster_path': "https://image.tmdb.org/t/p/w500" + result[i]['poster_path'],
       }
     }
   )
