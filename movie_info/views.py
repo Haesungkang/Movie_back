@@ -8,9 +8,15 @@ from .models import Movie
 from .serializers import MovieSerializer
 
 # Create your views here.
-def index(request):
+@api_view(['GET'])
+def movie_list(request):
+#   if request.method == 'GET':
     movies = Movie.objects.all()
-    context = {
-        'movies': movies,
-    }
-    return render(request, 'movies/index.html', context)
+    serializer = MovieSerializer(movies, many=True)
+    return Response(serializer.data)
+# 영화 목록을 추가할 필요는 없으므로 GET 방식만 가능하도록 설정한다.
+#   else:
+#     serializer = MovieSerializer(data=request.data)
+#     if serializer.is_valid(raise_exception=True):
+#       serializer.save()
+#       return Response(serializer.data)
