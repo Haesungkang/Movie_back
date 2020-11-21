@@ -1,8 +1,15 @@
 from rest_framework import serializers
-from .models import Review
+from .models import Article, Comment
 
-class ReviewSerializer(serializers.ModelSerializer):
+class ArticleSerializer(serializers.ModelSerializer):
   
   class Meta:
-    model = Review
-    fields = '__all__'
+    model = Article
+    fields = ('id', 'title', 'content',)
+
+
+class CommentSerializer(serializers.ModelSerializer):
+  
+  class Meta:
+    model = Comment
+    fields = ('id', 'content',)
