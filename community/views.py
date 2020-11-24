@@ -4,17 +4,17 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 
-# from rest_framework.decorators import authentication_classes, permission_classes
-# from rest_framework.permissions import IsAuthenticated
-# from rest_framework_jwt.authentication import JSONWebTokenAuthentication
+from rest_framework.decorators import authentication_classes, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework_jwt.authentication import JSONWebTokenAuthentication
 
 from .models import Article, Comment
 from .serializers import ArticleSerializer, CommentSerializer, ArticleListSerializer, CommentListSerializer
 
 
 @api_view(['GET', 'POST'])
-# @authentication_classes([JSONWebTokenAuthentication])
-# @permission_classes([IsAuthenticated])
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
 def article_list_create(request):
     if request.method == 'GET':
         articles = Article.objects.all()
@@ -30,8 +30,8 @@ def article_list_create(request):
 
 
 @api_view(['GET', 'PUT', 'DELETE'])
-# # @authentication_classes([JSONWebTokenAuthentication])
-# # @permission_classes([IsAuthenticated])
+@authentication_classes([JSONWebTokenAuthentication])
+@permission_classes([IsAuthenticated])
 def article_detail_update_delete(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
 

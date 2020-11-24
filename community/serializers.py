@@ -7,7 +7,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Article
-    fields = ('id', 'title',)
+    fields = ('id', 'title', 'user',)
 
 
 # 모든 Comment의 정보를 반환하기 위한 Serializer
@@ -23,7 +23,7 @@ class ArticleSerializer(serializers.ModelSerializer):
   
   class Meta:
     model = Article
-    fields = ('id', 'title', 'content',)
+    fields = ('id', 'title', 'content', 'user',)
 
 
 # Comment의 상세 정보를 생성 및 반환하기 위한 Serializer
