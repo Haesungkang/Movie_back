@@ -35,8 +35,8 @@ def article_list_create(request):
 def article_detail_update_delete(request, article_pk):
     article = get_object_or_404(Article, pk=article_pk)
 
-    # if not request.user.todos.filter(pk=todo_pk).exists():
-    #     return Response({'detail': '권한이 없습니다.'})
+    if not request.user.todos.filter(pk=todo_pk).exists():
+        return Response({'detail': '권한이 없습니다.'})
 
     if request.method == 'GET':
         serializer = ArticleSerializer(article)
