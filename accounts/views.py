@@ -1,7 +1,19 @@
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .serializers import UserSerializer
+
+# from django.contrib.auth.forms import (
+#     AuthenticationForm,
+#     PasswordChangeForm,
+# )
+# from django.contrib.auth.decorators import login_required
+# from django.views.decorators.http import require_POST, require_http_methods, require_safe
+# from django.contrib.auth import update_session_auth_hash
+# from .forms import CustomUserChangeForm
+
+
+
 
 # Create your views here.
 @api_view(['POST'])
@@ -28,3 +40,32 @@ def signup(request):
         return Response(serializer.data)
 
         
+# @login_required
+# @require_http_methods(['GET', 'POST'])
+# def update(request):
+#     if request.method == 'POST':
+#         form = CustomUserChangeForm(request.POST, instance=request.user)
+#         if form.is_valid():
+#             form.save()
+#             return redirect('community')
+#     else:
+#         form = CustomUserChangeForm(instance=request.user)
+#     context = {
+#         'form': form,
+#     }
+#     return render(request, 'accounts/update.html', context)
+
+
+# @login_required
+# @require_http_methods(['GET', 'POST'])
+# def change_password(request):
+#     if request.method == 'POST':
+#         form = PasswordChangeForm(request.user, request.POST)
+#         if form.is_valid():
+#             user = form.save()
+#             update_session_auth_hash(request, user)
+#             return redirect('community')
+#     else:
+#         form = PasswordChangeForm(request.user)
+#     context = {'form': form}
+#     return render(request, 'accounts/change_password.html', context)
