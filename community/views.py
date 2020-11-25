@@ -22,6 +22,7 @@ def article_list_create(request):
         # serializer = ArticleSerializer(request.user.articles, many=True)
         return Response(serializer.data)
     else:
+        # print(request.data)
         serializer = ArticleSerializer(data=request.data)
         if serializer.is_valid(raise_exception=True):
             # serializer.save()
