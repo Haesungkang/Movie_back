@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'accounts',
     'community',
     'movie_info',
+    'nowplaying',
     'recommend',
 
     'django.contrib.admin',

@@ -1,6 +1,9 @@
+# -*- coding: utf-8 -*-
 import json
 
-genre = [
+# nowplaying data의 popularity == 누적관객수입니다. movielist의 popularity와 혼용하여 알고리즘 짜지 않도록 주의해주세요!
+
+genres = [
   {
     "genre_ids": 28,
     "name": "액션"
@@ -81,6 +84,7 @@ genre = [
 
 result = [
     {
+      "popularity": 1546363,
       "vote_average": 9.08,
       "title": "삼진그룹 영어토익반",
       "release_date": "2020-10-21",
@@ -95,6 +99,23 @@ result = [
       "poster_path": "/5F1UUZjb7BaCQuUbTPBmOb7nlrE.jpg"
     },
     {
+      "popularity": 53491,
+      "vote_average": 7.45,
+      "title": "이웃사촌",
+      "release_date": "2020-11-25",
+      "original_language": "ko",
+      "original_title": "SAMJIN COMPANY ENGLISH CLASS",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "backdrop_path": "/teWEPXY2v0Qacq9tmxIR7y848C6.jpg",
+      "adult": "False",
+      "overview": "백수가장 좌천위기 도청팀장 대권(정우)은 팀원들과 함께 해외에서 입국하자마자 자택 격리된 정치인 가족을 24시간 감시하라는 미션을 받는다. 이웃집으로 위장 이사온 도청팀원들은 라디오 사연 신청부터 한밤중에 나는 부스럭 소리까지 수상한 가족들의 모든 소리와 행동을 감시하면서 새로운 비밀들을 하나씩 발견하게 되는데… 담벼락 사이 수상한 이웃사촌들 웃고 울리는 비밀 소통작전이 펼쳐진다!",
+      "poster_path": "/kxpDRY5qVP2JSP98Xqi2WKPWjm3.jpg"
+    },
+    {
+      "popularity": 222641,
       "vote_average": 9.05,
       "title": "내가 죽던 날",
       "release_date": "2020-11-12",
@@ -109,6 +130,23 @@ result = [
       "poster_path": "/2PpWTaxPR97EDzXcw7sBbnu28lt.jpg"
     },
     {
+      "popularity": 22234,
+      "vote_average": 7.67,
+      "title": "애비규환",
+      "release_date": "2020-11-12",
+      "original_language": "ko",
+      "original_title": "More than Family",
+      "genre_ids": [
+        18,
+        35
+      ],
+      "backdrop_path": "/2VTGWEpawVMfv00Od7pKI6VkDsp.jpg",
+      "adult": "False",
+      "overview": "연하 남친 ‘호훈’과의 불꽃 사랑으로 임신을 하게 된 대학생 ‘토일’. 출산 후 5개년 계획까지 준비하며 결혼을 선언했지만, 돌아온 것은 “넌 대체 누굴 닮아 그 모양이냐”는 부모님의 호통뿐이다. 누굴 닮았는지 직접 확인하겠다며 찾은 친아버지는 기대와 달리 실망스럽기만 하고, 착잡한 마음으로 집으로 돌아오자마자 예비 아빠 ‘호훈’의 행방이 묘연해진다. 어색한 현아빠, 철없는 구아빠, 집 나간 예비 아빠까지! 첩첩산중 설상가상 그야말로 ‘애비규환’이로다!",
+      "poster_path": "/pShB3OZAaOehDkehtqSS4voU6w5.jpg"
+    },
+    {
+      "popularity": 1319526,
       "vote_average": 8.57,
       "title": "도굴",
       "release_date": "2020-11-04",
@@ -123,6 +161,7 @@ result = [
       "poster_path": "/aU7OKmO4qO2pd6TlxC1QQqCkrZQ.jpg"
     },
     {
+      "popularity": 149021,
       "vote_average": 8.83,
       "title": "런",
       "release_date": "2020-11-20",
@@ -139,6 +178,7 @@ result = [
       "poster_path": "/swMFgTEcDUz7MCvWfYIIiZ8PatU.jpg"
     },
     {
+      "popularity": 18786,
       "vote_average": 8.00,
       "title": "마리 퀴리",
       "release_date": "2020-11-18",
@@ -155,6 +195,7 @@ result = [
       "poster_path": "/sZetjIZ1P4YhaBB93ZSE4Tp7xbH.jpg"
     },
     {
+      "popularity": 15824,
       "vote_average": 8.25,
       "title": "택스 콜렉터",
       "release_date": "2020-11-18",
@@ -169,61 +210,42 @@ result = [
       "adult": "True",
       "overview": "LA 지역 갱들을 관리하며 상납금을 수금하는 최고의 파트너 ‘크리퍼’와 ‘데이비드’ 세상 무서울 것 없는 이들 앞에 조직을 통째로 삼키려는 무법자 ‘코네호’가 나타난다. 지독하고 거칠게 살아남은 두 사람은 조직과 모든 것을 지키기 위해 무자비한 피의 전쟁을 시작하는데…",
       "poster_path": "/yhhJPePGHGtJ6LBVKCyfJg5EBnA.jpg"
-    },
-    # {
-    #   "vote_average": 7.65,
-    #   "title": "추억의 검정고무신",
-    #   "release_date": "2020-11-19",
-    #   "original_language": "ko",
-    #   "original_title": "The Precious memory of Gogo Brothers",
-    #   "genre_ids": [
-    #     16
-    #   ],
-    #   "backdrop_path": "",
-    #   "adult": "False",
-    #   "overview": "영화티켓이 10원, 소 한 마리가 5만원 하던 시절 장난꾸러기 기영, 기철 형제 가족의 평범하고도 특별한 일상이 펼쳐진다.",
-    #   "poster_path": "/GUv9mRFRSEwaC2hQEMeOu9mHrj.jpg"
-    # },
+    }
 ]
 
 
-# dumpdata 하기 전에 손 봐야 함!
-# 1. models.py에 NowPlaying model 설정하기
-# 2. 아래 코드 수정하기
-# 3. dumpdata json 파일 만들고 loaddata!
+dump = []
+for j in range(len(genres)):
+  dump.append(
+    {
+      "model": "nowplaying.genre",
+      "pk": genres[j]['genre_ids'],
+      "fields": {
+        'name': genres[j]['name']
+      }
+    }
+  )
 
-# dump = []
-# for j in range(len(genres)):
-#   dump.append(
-#     {
-#       "model": "movie_info.genre",
-#       "pk": genres[j]['genre_ids'],
-#       "fields": {
-#         'name': genres[j]['name']
-#       }
-#     }
-#   )
+for i in range(1, len(result)):
+  dump.append(
+    {
+      "model": "nowplaying.movie",
+      "pk": i,
+      "fields": {
+        'popularity': result[i]['popularity'],
+        'vote_average': result[i]['vote_average'],
+        'title': result[i]['title'],
+        'release_date': result[i]['release_date'],
+        'original_language': result[i]['original_language'],
+        'original_title': result[i]['original_title'],
+        'genre_ids': result[i]['genre_ids'],
+        'backdrop_path': result[i]['backdrop_path'],
+        'adult': result[i]['adult'],
+        'overview': result[i]['overview'],
+        'poster_path': "https://image.tmdb.org/t/p/w500" + result[i]['poster_path'],
+      }
+    }
+  )
 
-# for i in range(1, len(result)):
-#   dump.append(
-#     {
-#       "model": "movie_info.movie",
-#       "pk": i,
-#       # "fields": result[i]
-#       "fields": {
-#         'vote_average': result[i]['vote_average'],
-#         'title': result[i]['title'],
-#         'release_date': result[i]['release_date'],
-#         'original_language': result[i]['original_language'],
-#         'original_title': result[i]['original_title'],
-#         'genre_ids': result[i]['genre_ids'],
-#         'backdrop_path': result[i]['backdrop_path'],
-#         'adult': result[i]['adult'],
-#         'overview': result[i]['overview'],
-#         'poster_path': "https://image.tmdb.org/t/p/w500" + result[i]['poster_path'],
-#       }
-#     }
-#   )
-
-# with open('nowplaying.json', 'w', encoding='UTF-8') as file:
-#   file.write(json.dumps(dump, ensure_ascii=False))
+with open('nowplaying.json', 'w', encoding='UTF-8') as file:
+  file.write(json.dumps(dump, ensure_ascii=False))
