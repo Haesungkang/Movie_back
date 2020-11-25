@@ -83,3 +83,6 @@ def comment_detail_update_delete(request, comment_pk):
     else:
         comment.delete()
         return Response({ 'id': comment_pk }, status=status.HTTP_204_NO_CONTENT)
+
+
+# router go , active 되는 위치를 찾아서 어떤거로 통해서 들어왔는지 router go ㅇㅅㅇ active 이미지를 받아서 
