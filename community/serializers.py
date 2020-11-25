@@ -25,6 +25,7 @@ class ArticleSerializer(serializers.ModelSerializer):
   class Meta:
     model = Article
     fields = ('id', 'title', 'content', 'user',)
+    read_only_fields = ('user',)
 
 
 # Comment의 상세 정보를 생성 및 반환하기 위한 Serializer
