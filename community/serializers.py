@@ -19,17 +19,24 @@ class ArticleListSerializer(serializers.ModelSerializer):
 # 모든 Comment의 정보를 반환하기 위한 Serializer
 class CommentListSerializer(serializers.ModelSerializer):
   
+  user_name = serializers.SerializerMethodField()
+  def get_user_name(self, obj):
+      return obj.user.username
+
   class Meta:
     model = Comment
-    fields = ('id', 'content',)
+    fields = '__all__'
+    # fields = ('id', 'content',)
+    read_only_fields = ('user', 'article', 'created_at',)
     
 
 # Article의 상세 정보를 생성 및 반환하기 위한 Serializer
 class ArticleSerializer(serializers.ModelSerializer):
-  user_name = serializers.SerializerMethodField()
-    
+  
+  user_name = serializers.SerializerMethodField()  
   def get_user_name(self, obj):
       return obj.user.username
+
   class Meta:
     model = Article
     fields = '__all__'
@@ -39,8 +46,13 @@ class ArticleSerializer(serializers.ModelSerializer):
 
 # Comment의 상세 정보를 생성 및 반환하기 위한 Serializer
 class CommentSerializer(serializers.ModelSerializer):
+
+  user_name = serializers.SerializerMethodField()
+  def get_user_name(self, obj):
+      return obj.user.username
   
   class Meta:
     model = Comment
-    fields = ('id', 'content', 'article',)
-    read_only_fields = ('article',)
+    fields = '__all__'
+    # fields = ('id', 'content', 'article',)
+    read_only_fields = ('user', 'article',)
