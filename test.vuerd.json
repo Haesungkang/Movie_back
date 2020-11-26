@@ -1,0 +1,1874 @@
+{
+  "canvas": {
+    "width": 2000,
+    "height": 2000,
+    "scrollTop": 878,
+    "scrollLeft": 0,
+    "show": {
+      "tableComment": true,
+      "columnComment": true,
+      "columnDataType": true,
+      "columnDefault": true,
+      "columnAutoIncrement": false,
+      "columnPrimaryKey": true,
+      "columnUnique": false,
+      "columnNotNull": true,
+      "relationship": true
+    },
+    "database": "MySQL",
+    "databaseName": "",
+    "canvasType": "ERD",
+    "language": "GraphQL",
+    "tableCase": "pascalCase",
+    "columnCase": "camelCase",
+    "setting": {
+      "relationshipDataTypeSync": true,
+      "columnOrder": [
+        "columnName",
+        "columnDataType",
+        "columnNotNull",
+        "columnUnique",
+        "columnAutoIncrement",
+        "columnDefault",
+        "columnComment"
+      ]
+    }
+  },
+  "table": {
+    "tables": [
+      {
+        "name": "Accounts",
+        "comment": "글, 댓글을 작성할 계정",
+        "columns": [
+          {
+            "name": "user_id",
+            "comment": "유저 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8f1b8f1b-b7af-e320-e635-74726c5b2b95"
+          },
+          {
+            "name": "user_name",
+            "comment": "유저 이름",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 65,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "162bc098-45d7-905f-7b35-13a3a574484c"
+          },
+          {
+            "name": "user_password",
+            "comment": "유저 비밀번호",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 88,
+              "widthComment": 84,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8ef07d90-1bf1-2c0e-cd5e-3b461552dba8"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 506.40000000000134,
+          "top": 143.19999999999962,
+          "zIndex": 765,
+          "widthName": 60,
+          "widthComment": 136
+        },
+        "id": "e7650936-ea25-5484-fe41-ca438d299f5f"
+      },
+      {
+        "name": "Genre",
+        "comment": "Movie_info에서 장르 정보",
+        "columns": [
+          {
+            "name": "genre_id",
+            "comment": "장르 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "62344f06-61fd-9625-48de-2d3c7e8220b8"
+          },
+          {
+            "name": "name",
+            "comment": "장르 이름",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6d2382ca-6771-f28a-0abb-d44874556358"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 554.8000000858303,
+          "top": 690.7999981403345,
+          "zIndex": 1267,
+          "widthName": 60,
+          "widthComment": 153
+        },
+        "id": "ac692399-1e07-6cc8-1f97-85788e84b5f9"
+      },
+      {
+        "name": "Article",
+        "comment": "Community에서 글 작성",
+        "columns": [
+          {
+            "name": "article_id",
+            "comment": "글 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fd1ab292-dd80-cd8c-7240-59b5ea94f30a"
+          },
+          {
+            "name": "user_id",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3ee5a3f2-9957-337c-f77d-4646241b5a04"
+          },
+          {
+            "name": "title",
+            "comment": "글 제목",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3342e064-4805-cac2-1254-20f2319b5341"
+          },
+          {
+            "name": "content",
+            "comment": "글 내용",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "6f0d5b45-6142-28a0-1255-67ab6098b93a"
+          },
+          {
+            "name": "created_at",
+            "comment": "글 생성 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63,
+              "widthComment": 76,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "9e40dca8-d0c3-f2e6-dea2-b0ac8b74ce6a"
+          },
+          {
+            "name": "updated_at",
+            "comment": "글 수정 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 68,
+              "widthComment": 76,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "05151078-45a4-d71e-d510-3b221d15ba0e"
+          },
+          {
+            "name": "user_id",
+            "comment": "유저 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5a83fca3-5966-f451-4417-6cbe283bd9e4"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 21.600000000000012,
+          "top": 69.6000000000002,
+          "zIndex": 787,
+          "widthName": 60,
+          "widthComment": 144
+        },
+        "id": "36bc0417-5040-7e03-7e47-f5ddb3807716"
+      },
+      {
+        "name": "Comment",
+        "comment": "Community에서 댓글 작성",
+        "columns": [
+          {
+            "name": "comment_id",
+            "comment": "댓글 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a418d368-1dc6-467c-36c6-ca3392871cc0"
+          },
+          {
+            "name": "article_id",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4cd51217-0eaa-1006-cfd2-f5c2bafeb262"
+          },
+          {
+            "name": "user_id",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "c2543a72-68df-5e8c-a584-33b9b435c906"
+          },
+          {
+            "name": "content",
+            "comment": "댓글 내용",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "39521300-1078-2603-09db-c975474c4c60"
+          },
+          {
+            "name": "created_at",
+            "comment": "댓글 생성 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63,
+              "widthComment": 89,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "75ff056d-44c8-602f-b736-85a7600e6e7e"
+          },
+          {
+            "name": "updated_at",
+            "comment": "댓글 수정 날짜",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 68,
+              "widthComment": 89,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "19673e88-6ad4-abb4-62ed-7130a4f47ed5"
+          },
+          {
+            "name": "user_id",
+            "comment": "유저 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f9840ce1-bc98-8677-dbb4-09750152365b"
+          },
+          {
+            "name": "article_id",
+            "comment": "글 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "69c0e326-b691-a664-b8cc-bb055070a890"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 12.79999999999999,
+          "top": 442.7999999999997,
+          "zIndex": 783,
+          "widthName": 60,
+          "widthComment": 157
+        },
+        "id": "4ca18f63-6c21-1809-5d3a-5f39c8e8c806"
+      },
+      {
+        "name": "Movie",
+        "comment": "Movie_info에서 영화 정보",
+        "columns": [
+          {
+            "name": "movie_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "951ce3cd-5a12-c0cd-aa6a-e148f1663c9f"
+          },
+          {
+            "name": "popularity",
+            "comment": "영화 관객 수",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61,
+              "widthComment": 76,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "78b8c69e-6801-74b0-b4c6-2ed87422ab72"
+          },
+          {
+            "name": "vote_average",
+            "comment": "영화 평균 평점",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 80,
+              "widthComment": 89,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ec8b0828-a277-bb5b-f1fb-30cba3887a00"
+          },
+          {
+            "name": "release_date",
+            "comment": "영화 개봉 날짜",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 75,
+              "widthComment": 89,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "db92020e-8d6c-b015-bdc0-d396ec99e402"
+          },
+          {
+            "name": "overview",
+            "comment": "영화 줄거리",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "168b947d-94b7-36aa-df0b-3103a0bbdc29"
+          },
+          {
+            "name": "poster_path",
+            "comment": "영화 포스터",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 72,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "2517c4a2-a1cc-52ad-853d-188cff78ed1c"
+          },
+          {
+            "name": "adult",
+            "comment": "영화 연령 등급",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 89,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "db4c4d93-b467-3705-274d-2ac379fd2dd6"
+          },
+          {
+            "name": "original_language",
+            "comment": "영화 원어",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b63047c8-54f8-954d-8623-52d5e3512a79"
+          },
+          {
+            "name": "original_title",
+            "comment": "영화 원제목",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "27d50145-b6aa-6555-bcdc-d599081d89db"
+          },
+          {
+            "name": "genre_ids",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "a15a8baf-1fec-da54-15b3-2896e98f57d0"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 512.8000000000003,
+          "top": 322.4000000000004,
+          "zIndex": 974,
+          "widthName": 60,
+          "widthComment": 153
+        },
+        "id": "03f8f1cb-5866-02a8-3d31-df1e380b2046"
+      },
+      {
+        "name": "Rate",
+        "comment": "Movie_info에서 영화 평점",
+        "columns": [
+          {
+            "name": "rate_id",
+            "comment": "평점 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "709756a3-e3f5-4e77-b629-53d52dfa7227"
+          },
+          {
+            "name": "rank",
+            "comment": "평점",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "4459dec9-336f-3bd7-5cc6-c030a35d1fb2"
+          },
+          {
+            "name": "movie_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "deaf87a0-6503-d2b8-45c1-e8eeff20a43d"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1035.2,
+          "top": 648.7999999999992,
+          "zIndex": 871,
+          "widthName": 60,
+          "widthComment": 153
+        },
+        "id": "e20a1cb0-44a9-d081-7f6a-3a03746c87b2"
+      },
+      {
+        "name": "Recommend",
+        "comment": "영화 추천",
+        "columns": [
+          {
+            "name": "recommend_id",
+            "comment": "추천 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 89,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3bc424b6-974d-0160-c6c1-4eab420fcf42"
+          },
+          {
+            "name": "title",
+            "comment": "추천할 영화 제목",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f94f6a7e-2c6e-f5d0-13b2-19816e78d35b"
+          },
+          {
+            "name": "release_date",
+            "comment": "추천할 영화 출시 날짜",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 75,
+              "widthComment": 132,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "18f95ce9-c562-7b4f-9853-b433a13d83f8"
+          },
+          {
+            "name": "popularity",
+            "comment": "추천할 영화 인기",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 61,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0ab3fc79-731b-c736-83e6-12f70e0138f1"
+          },
+          {
+            "name": "vote_average",
+            "comment": "추천할 영화 평균 평점",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 80,
+              "widthComment": 132,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ad687586-c999-08b7-77a0-596c20b42c8e"
+          },
+          {
+            "name": "movie_id",
+            "comment": "",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "eee2df24-d387-04e0-5c14-fb39c898ab09"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 1050.4,
+          "top": 295.1999999999996,
+          "zIndex": 873,
+          "widthName": 76,
+          "widthComment": 60
+        },
+        "id": "38705d3a-bef0-729c-459c-32b457c060b6"
+      },
+      {
+        "name": "NowPlaying",
+        "comment": "현재 상영 중인 영화 정보",
+        "columns": [
+          {
+            "name": "movie_id",
+            "comment": "NowPlaying",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "9d614e96-a103-cd90-cdff-3dc055694f73"
+          },
+          {
+            "name": "popularity",
+            "comment": "영화 관객 수",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 62,
+              "widthComment": 76,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "65d86622-05e6-2eb9-fa7c-959c73fe7bd4"
+          },
+          {
+            "name": "vote_average",
+            "comment": "영화 평균 평점",
+            "dataType": "FLOAT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 79,
+              "widthComment": 89,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "99e0f6b3-4a1a-98f8-cb0d-cc3b18e2729c"
+          },
+          {
+            "name": "title",
+            "comment": "영화 제목",
+            "dataType": "CHAR",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "79ca1824-a5cd-9396-0a34-bc76aa5fb58d"
+          },
+          {
+            "name": "release_date",
+            "comment": "영화 개봉 날짜",
+            "dataType": "DATE",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 75,
+              "widthComment": 89,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "f804bcd1-089f-e04d-a719-77d78f8438c7"
+          },
+          {
+            "name": "original_language",
+            "comment": "영화 원어",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 106,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "1fe65011-ae79-fc5d-37a0-9877a59dcffe"
+          },
+          {
+            "name": "original_title",
+            "comment": "영화 원제목",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 74,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "48070786-62ee-f627-d9be-063fbccf482a"
+          },
+          {
+            "name": "backdrop_path",
+            "comment": "영화 배경사진 주소",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 89,
+              "widthComment": 115,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "eca6b4ab-f157-6cac-f3ee-3e878ab47a6d"
+          },
+          {
+            "name": "adult",
+            "comment": "청소년관람불가",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 93,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3971c35c-183f-e26a-94e9-95f4fccba859"
+          },
+          {
+            "name": "overview",
+            "comment": "영화 줄거리",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "0f3bb750-91ac-539d-96f1-19e316b39ed5"
+          },
+          {
+            "name": "poster_path",
+            "comment": "영화 포스터 주소",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 71,
+              "widthComment": 102,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "fd5b4d13-5253-56a2-f950-a135dae7676f"
+          },
+          {
+            "name": "genre_ids",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "d73cca14-0997-b78e-cccf-0181283d4f46"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 37,
+          "top": 917,
+          "zIndex": 1257,
+          "widthName": 72,
+          "widthComment": 150
+        },
+        "id": "7848c032-c996-7280-b0a2-6f5b2e6a7fd0"
+      },
+      {
+        "name": "Genre",
+        "comment": "NowPlaying 장르 정보",
+        "columns": [
+          {
+            "name": "genre_id",
+            "comment": "장르 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "79dded3d-2f95-b41e-8317-42095184485d"
+          },
+          {
+            "name": "name",
+            "comment": "장르 이름",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "ed4095e5-ccda-cf56-f3a4-4ecd579c183f"
+          },
+          {
+            "name": "movie_id",
+            "comment": "NowPlaying",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "b6e6a4ce-13d2-83ef-c958-57fd8d3d9efe"
+          },
+          {
+            "name": "genre_ids",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "955e58c6-7f04-c3df-06da-fc52153ba596"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 549,
+          "top": 983,
+          "zIndex": 1266,
+          "widthName": 60,
+          "widthComment": 133
+        },
+        "id": "34365e00-24e4-e069-11f8-00077eccf8fa"
+      },
+      {
+        "name": "Rate",
+        "comment": "NowPlaying 영화 평점",
+        "columns": [
+          {
+            "name": "rate_id",
+            "comment": "평점 key",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": true,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": true,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "696b6b97-2425-b70f-b6b4-afebb67eae60"
+          },
+          {
+            "name": "rank",
+            "comment": "평점",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "8fe19f64-02bc-c285-0ec5-bb9b1c4e1273"
+          },
+          {
+            "name": "movie_id",
+            "comment": "NowPlaying",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "5bb7afd5-b36b-9879-e20b-36a5ad79da4e"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 553,
+          "top": 1162,
+          "zIndex": 1265,
+          "widthName": 60,
+          "widthComment": 133
+        },
+        "id": "1b88d62d-ceb4-d79b-7b97-b9c584619400"
+      },
+      {
+        "name": "MovieComment",
+        "comment": "NowPlaying 영화들에 댓글 달기",
+        "columns": [
+          {
+            "name": "content",
+            "comment": "댓글 내용",
+            "dataType": "TEXT",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 60,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "3179b005-4486-8683-340f-e7bffdef3402"
+          },
+          {
+            "name": "created_at",
+            "comment": "댓글 생성 시각",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 63,
+              "widthComment": 89,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "cebedca6-9e96-b803-d58d-df6d60872d08"
+          },
+          {
+            "name": "updated_at",
+            "comment": "댓글 수정 시각",
+            "dataType": "DATETIME",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": true
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": false,
+              "pfk": false,
+              "widthName": 68,
+              "widthComment": 89,
+              "widthDataType": 63,
+              "widthDefault": 60
+            },
+            "id": "c242c933-6b49-5f75-45f3-45cdf0417268"
+          },
+          {
+            "name": "movie_id",
+            "comment": "NowPlaying",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 72,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "430ccec8-dd92-2a24-ad3d-5c2448c34255"
+          },
+          {
+            "name": "genre_ids",
+            "comment": "foreignkey",
+            "dataType": "INTEGER",
+            "default": "",
+            "option": {
+              "autoIncrement": false,
+              "primaryKey": false,
+              "unique": false,
+              "notNull": false
+            },
+            "ui": {
+              "active": false,
+              "pk": false,
+              "fk": true,
+              "pfk": false,
+              "widthName": 60,
+              "widthComment": 64,
+              "widthDataType": 60,
+              "widthDefault": 60
+            },
+            "id": "17216c9b-971f-6a7d-1f06-79757f3d81e3"
+          }
+        ],
+        "ui": {
+          "active": false,
+          "left": 554,
+          "top": 1329,
+          "zIndex": 1264,
+          "widthName": 96,
+          "widthComment": 189
+        },
+        "id": "5dc28bf1-82bd-d120-7fa1-2ff2a6ae2ea1"
+      }
+    ],
+    "indexes": []
+  },
+  "memo": {
+    "memos": []
+  },
+  "relationship": {
+    "relationships": [
+      {
+        "identification": false,
+        "start": {
+          "tableId": "e7650936-ea25-5484-fe41-ca438d299f5f",
+          "columnIds": [
+            "8f1b8f1b-b7af-e320-e635-74726c5b2b95"
+          ],
+          "x": 506.40000000000134,
+          "y": 175.82499999999962,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "36bc0417-5040-7e03-7e47-f5ddb3807716",
+          "columnIds": [
+            "5a83fca3-5966-f451-4417-6cbe283bd9e4"
+          ],
+          "x": 395.6,
+          "y": 175.8500000000002,
+          "direction": "right"
+        },
+        "id": "635144ba-7232-1f53-9adb-f51cb8b0cd34",
+        "relationshipType": "ZeroOneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "e7650936-ea25-5484-fe41-ca438d299f5f",
+          "columnIds": [
+            "8f1b8f1b-b7af-e320-e635-74726c5b2b95"
+          ],
+          "x": 506.40000000000134,
+          "y": 241.07499999999962,
+          "direction": "left"
+        },
+        "end": {
+          "tableId": "4ca18f63-6c21-1809-5d3a-5f39c8e8c806",
+          "columnIds": [
+            "f9840ce1-bc98-8677-dbb4-09750152365b"
+          ],
+          "x": 405.8,
+          "y": 559.2999999999997,
+          "direction": "right"
+        },
+        "id": "866c23be-e3bb-8c76-8452-5cc1a9a45dc5",
+        "relationshipType": "ZeroOneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "36bc0417-5040-7e03-7e47-f5ddb3807716",
+          "columnIds": [
+            "fd1ab292-dd80-cd8c-7240-59b5ea94f30a"
+          ],
+          "x": 208.60000000000002,
+          "y": 282.1000000000002,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "4ca18f63-6c21-1809-5d3a-5f39c8e8c806",
+          "columnIds": [
+            "69c0e326-b691-a664-b8cc-bb055070a890"
+          ],
+          "x": 209.29999999999998,
+          "y": 442.7999999999997,
+          "direction": "top"
+        },
+        "id": "209dfbb3-03aa-839d-2ee8-13a58455de82",
+        "relationshipType": "ZeroOneN"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "ac692399-1e07-6cc8-1f97-85788e84b5f9",
+          "columnIds": [
+            "62344f06-61fd-9625-48de-2d3c7e8220b8"
+          ],
+          "x": 728.3000000858303,
+          "y": 690.7999981403345,
+          "direction": "top"
+        },
+        "end": {
+          "tableId": "03f8f1cb-5866-02a8-3d31-df1e380b2046",
+          "columnIds": [
+            "a15a8baf-1fec-da54-15b3-2896e98f57d0"
+          ],
+          "x": 723.8000000000003,
+          "y": 596.4000000000003,
+          "direction": "bottom"
+        },
+        "id": "0cbc2520-20ba-6fdc-0524-8dc86b28975c",
+        "relationshipType": "One"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "03f8f1cb-5866-02a8-3d31-df1e380b2046",
+          "columnIds": [
+            "951ce3cd-5a12-c0cd-aa6a-e148f1663c9f"
+          ],
+          "x": 934.8000000000003,
+          "y": 390.9000000000004,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "38705d3a-bef0-729c-459c-32b457c060b6",
+          "columnIds": [
+            "eee2df24-d387-04e0-5c14-fb39c898ab09"
+          ],
+          "x": 1050.4,
+          "y": 391.1999999999996,
+          "direction": "left"
+        },
+        "id": "35d48cb4-43dc-137d-9a93-3592019e57d4",
+        "relationshipType": "One"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "03f8f1cb-5866-02a8-3d31-df1e380b2046",
+          "columnIds": [
+            "951ce3cd-5a12-c0cd-aa6a-e148f1663c9f"
+          ],
+          "x": 934.8000000000003,
+          "y": 527.9000000000003,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "e20a1cb0-44a9-d081-7f6a-3a03746c87b2",
+          "columnIds": [
+            "deaf87a0-6503-d2b8-45c1-e8eeff20a43d"
+          ],
+          "x": 1035.2,
+          "y": 714.0499999999992,
+          "direction": "left"
+        },
+        "id": "01b2c737-a260-d272-2810-80ba340bec9b",
+        "relationshipType": "One"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "7848c032-c996-7280-b0a2-6f5b2e6a7fd0",
+          "columnIds": [
+            "9d614e96-a103-cd90-cdff-3dc055694f73",
+            "d73cca14-0997-b78e-cccf-0181283d4f46"
+          ],
+          "x": 485,
+          "y": 995.75,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "34365e00-24e4-e069-11f8-00077eccf8fa",
+          "columnIds": [
+            "b6e6a4ce-13d2-83ef-c958-57fd8d3d9efe",
+            "955e58c6-7f04-c3df-06da-fc52153ba596"
+          ],
+          "x": 549,
+          "y": 1058.5,
+          "direction": "left"
+        },
+        "id": "eaea860d-a585-dffd-e1c1-bc214ab4a063",
+        "relationshipType": "One"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "7848c032-c996-7280-b0a2-6f5b2e6a7fd0",
+          "columnIds": [
+            "9d614e96-a103-cd90-cdff-3dc055694f73"
+          ],
+          "x": 485,
+          "y": 1153.25,
+          "direction": "right"
+        },
+        "end": {
+          "tableId": "1b88d62d-ceb4-d79b-7b97-b9c584619400",
+          "columnIds": [
+            "5bb7afd5-b36b-9879-e20b-36a5ad79da4e"
+          ],
+          "x": 553,
+          "y": 1227.25,
+          "direction": "left"
+        },
+        "id": "417eccea-87b2-dc0a-fdcb-d1a054b6ea9e",
+        "relationshipType": "One"
+      },
+      {
+        "identification": false,
+        "start": {
+          "tableId": "7848c032-c996-7280-b0a2-6f5b2e6a7fd0",
+          "columnIds": [
+            "9d614e96-a103-cd90-cdff-3dc055694f73",
+            "d73cca14-0997-b78e-cccf-0181283d4f46"
+          ],
+          "x": 261,
+          "y": 1232,
+          "direction": "bottom"
+        },
+        "end": {
+          "tableId": "5dc28bf1-82bd-d120-7fa1-2ff2a6ae2ea1",
+          "columnIds": [
+            "430ccec8-dd92-2a24-ad3d-5c2448c34255",
+            "17216c9b-971f-6a7d-1f06-79757f3d81e3"
+          ],
+          "x": 554,
+          "y": 1414.75,
+          "direction": "left"
+        },
+        "id": "649b5294-88c7-2df8-c414-79a405f6f2ab",
+        "relationshipType": "OneOnly"
+      }
+    ]
+  }
+}
