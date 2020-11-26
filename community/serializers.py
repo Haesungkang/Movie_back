@@ -13,7 +13,7 @@ class ArticleListSerializer(serializers.ModelSerializer):
     model = Article
     # fields = ('id', 'title', 'user', 'created_at', 'content',)
     fields = '__all__'
-    read_only_fields = ('user', 'created_at',)
+    read_only_fields = ('user', 'created_at', 'updated_at',)
 
 
 # 모든 Comment의 정보를 반환하기 위한 Serializer
@@ -27,7 +27,7 @@ class CommentListSerializer(serializers.ModelSerializer):
     model = Comment
     fields = '__all__'
     # fields = ('id', 'content',)
-    read_only_fields = ('user', 'article', 'created_at',)
+    read_only_fields = ('user', 'article', 'created_at', 'updated_at',)
     
 
 # Article의 상세 정보를 생성 및 반환하기 위한 Serializer
@@ -41,7 +41,7 @@ class ArticleSerializer(serializers.ModelSerializer):
     model = Article
     fields = '__all__'
     # fields = ('id', 'title', 'content', 'user',)
-    read_only_fields = ('user',)
+    read_only_fields = ('user', 'created_at', 'updated_at',)
 
 
 # Comment의 상세 정보를 생성 및 반환하기 위한 Serializer
@@ -55,4 +55,4 @@ class CommentSerializer(serializers.ModelSerializer):
     model = Comment
     fields = '__all__'
     # fields = ('id', 'content', 'article',)
-    read_only_fields = ('user', 'article',)
+    read_only_fields = ('user', 'article', 'created_at', 'updated_at',)
