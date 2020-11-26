@@ -67,9 +67,10 @@ def comment_create(request, article_pk):
 @api_view(['GET'])
 @authentication_classes([JSONWebTokenAuthentication])
 @permission_classes([IsAuthenticated])
-def comment_list(request):
-    comments = Comment.objects.all()
-    serializer = CommentListSerializer(comments, many=True)
+def comment_list(request, article_pk):
+    article = get_object_or_404(Article, pk=article_pk)
+    comments = article.comments.all()
+    serializer = CommentSerializer(comments, many=True)
     return Response(serializer.data)
 
 
