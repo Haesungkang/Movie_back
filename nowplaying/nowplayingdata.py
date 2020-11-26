@@ -226,11 +226,11 @@ for j in range(len(genres)):
     }
   )
 
-for i in range(1, len(result)):
+for i in range(len(result)):
   dump.append(
     {
       "model": "nowplaying.movie",
-      "pk": i,
+      "pk": (i+1),
       "fields": {
         'popularity': result[i]['popularity'],
         'vote_average': result[i]['vote_average'],

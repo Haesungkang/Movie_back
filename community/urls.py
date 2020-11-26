@@ -8,4 +8,4 @@ urlpatterns = [
 
     path('comments/', views.comment_list),
     path('comments/<int:comment_pk>/', views.comment_detail_update_delete),
-]
+]git 
